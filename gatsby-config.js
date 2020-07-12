@@ -21,5 +21,17 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Abidh - Portfolio`,
+        short_name: `Portfolio`,
+        start_url: `/`,
+        background_color: `#542c85`,
+        theme_color: `#542c85`,
+        icon:`src/assets/img/website-icon.png`, 
+        display: `standalone`,
+      },
+    },
   ],
 };
