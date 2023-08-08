@@ -13,19 +13,19 @@ module.exports = {
     contact: 'abidhone@gmail.com',
     // social
     socialLinks: [{
-            icon: 'fa-linkedin',
-            name: 'Github',
-            url: 'https://www.linkedin.com/in/abidhkm/',
-        },
-        {
-            icon: 'fa-github',
-            name: 'Github',
-            url: 'https://github.com/abidhkm',
-        },
-        {
-            icon: 'fa-stack-overflow',
-            name: 'Github',
-            url: 'https://stackoverflow.com/users/story/7787290',
-        }
+        icon: 'fa-linkedin',
+        name: 'Github',
+        url: 'https://www.linkedin.com/in/abidhkm/',
+    },
+    {
+        icon: 'fa-github',
+        name: 'Github',
+        url: 'https://github.com/abidhkm',
+    },
+    {
+        icon: 'fa-stack-overflow',
+        name: 'Github',
+        url: 'https://stackoverflow.com/users/7787290/abidh?tab=profile',
+    }
     ],
 };
