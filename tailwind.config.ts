@@ -12,6 +12,8 @@ const config: Config = {
         mainBgColor: "var(--main-background)",
         mainTextColor: "var(--main-text-color)",
         mainBorderColor: "var(--main-border-color)",
+        mainLinkColor: "var(--main-link-color)",
+        secondaryTextColor: "var(--secondary-text-color)",
       },
     },
   },

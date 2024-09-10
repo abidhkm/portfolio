@@ -1,7 +1,3 @@
-import { PinLocation01Icon } from "hugeicons-react";
-import { ComputerProgramming01Icon } from "hugeicons-react";
-import { Calendar01Icon } from "hugeicons-react";
-
 type WorkItemProps = {
   role: string;
   companyName: string;
@@ -19,19 +15,12 @@ export const WorkItem = ({
   return (
     <div className="border-l-2 border-mainBorderColor pl-8 space-y-4">
       <p className="flex gap-2 ">
-        <ComputerProgramming01Icon />
-        {role} @ {companyName}
+        👨‍💻 {role} @ {companyName}
       </p>
-      <div className="flex gap-4">
-        <p className="flex gap-2">
-          <Calendar01Icon />
-          {timePeriod}
-        </p>
+      <div className="flex gap-4 text-secondaryTextColor flex-wrap">
+        <p className="flex gap-2">📆 {timePeriod}</p>
         <p>•</p>
-        <p className="flex gap-2">
-          <PinLocation01Icon />
-          {location}
-        </p>
+        <p className="flex gap-2">{location} 📍</p>
       </div>
     </div>
   );

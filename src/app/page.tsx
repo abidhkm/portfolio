@@ -1,44 +1,92 @@
 import Image from "next/image";
-import { MailAtSign01Icon } from "hugeicons-react";
-import { PinLocation01Icon } from "hugeicons-react";
-import { UserCircleIcon } from "hugeicons-react";
-import { Briefcase06Icon } from "hugeicons-react";
-import { Mortarboard01Icon } from "hugeicons-react";
-import { Calendar01Icon } from "hugeicons-react";
+import { faBolt } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { WorkItem } from "./components/workItem";
 
 export default function Home() {
   return (
-    <div className="bg-mainBgColor min-h-screen flex align-middle justify-center py-6">
-      <main className="lg:w-[1024px] space-y-4">
-        <div className="flex gap-8 items-center flex-row justify-evenly">
+    <div className="bg-mainBgColor min-h-screen flex align-middle justify-center md:py-20">
+      <main className="lg:w-[1024px] space-y-4 p-6 md:p-4 xl:p-2">
+        <div className="flex gap-8 items-center flex-col sm:flex-row">
           <div>
             <Image
               className="rounded-full"
-              src="https://ifkash.vercel.app/images/gojo.webp"
+              src="https://avatars.githubusercontent.com/u/22368311?v=4"
               height={200}
               width={200}
               alt="profile pic"
             />
           </div>
-          <div className="space-y-4">
-            <p className="text-3xl">Abidh Kuzhumbil Muhammed</p>
-            <p className="flex gap-2">
-              <MailAtSign01Icon /> abidhone@gmail.com
-            </p>
-            <p className="flex gap-2">
-              <PinLocation01Icon /> Berlin, Germany
-            </p>
+          <div className=" flex-1 flex justify-center">
+            <div className="space-y-4">
+              <p className="text-3xl text-center">Abidh Kuzhumbil Muhammed</p>
+              <div className="space-y-2">
+                <p className="flex gap-2 items-center justify-center sm:justify-start">
+                  <FontAwesomeIcon icon={faEnvelope} height={20} />{" "}
+                  abidhone@gmail.com
+                </p>
+                <p className="flex gap-2 justify-center sm:justify-start">
+                  📍 Berlin, Germany
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-10 pt-8">
+          <div className="flex gap-8 flex-wrap">
+            <div className="flex items-center gap-1">
+              <FontAwesomeIcon icon={faLinkedin} height={20} />
+              <a
+                className="text-mainLinkColor text-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/abidhkm/"
+              >
+                Linkedin
+              </a>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <FontAwesomeIcon icon={faGithub} height={20} />
+              <a
+                className="text-mainLinkColor text-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.github.com/abidhkm/"
+              >
+                Github
+              </a>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <FontAwesomeIcon icon={faStackOverflow} height={20} />
+              <a
+                className="text-mainLinkColor text-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://stackoverflow.com/users/story/7787290"
+              >
+                Stackoverflow
+              </a>
+            </div>
+          </div>
+
           <div className="space-y-1">
-            <p className="text-lg flex gap-2">
-              <UserCircleIcon /> Summary
+            <p className="text-lg flex gap-2 items-center">
+              <FontAwesomeIcon icon={faBolt} height={20} />
+              Summary
             </p>
-            <p className="text-sm">
-              Results-oriented Full Stack Developer with 6+ years of experience
+            <p className="text-base">
+              Results-oriented Full stack developer with 6+ years of experience
               in architecting, designing, and building robust, scalable web
               applications. Proficient in JavaScript ecosystem (React, Node.js,
               TypeScript) and adept at delivering exceptional user experiences.
@@ -50,12 +98,12 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-lg flex gap-2 pb-8">
-              <Briefcase06Icon /> Work
+            <p className="text-lg flex gap-2 pb-8 items-center">
+              <FontAwesomeIcon icon={faBriefcase} height={20} /> Work
             </p>
             <div className="space-y-8">
               <WorkItem
-                role="Fullstack engineer"
+                role="Full stack engineer"
                 companyName="Erblotse"
                 timePeriod="03.2023 - 07.2024"
                 location="Berlin, Germany"
@@ -83,22 +131,18 @@ export default function Home() {
 
           <div>
             <p className="text-lg flex gap-2 pb-8">
-              <Mortarboard01Icon /> Education
+              <FontAwesomeIcon icon={faGraduationCap} height={20} /> Education
             </p>
-            <div className="border-l-2 border-mainBorderColor pl-8">
-              <p>Muthoot Institute of Technology and Science</p>
-              <p>Bacherlor of Technology, Computer Sciene</p>
+            <div className="border-l-2 border-mainBorderColor pl-8 space-y-2">
+              <p>Bacherlor of Technology, Computer Sciene and Engineering</p>
+              <p className="text-secondaryTextColor">
+                Muthoot Institute of Technology and Science
+              </p>
 
-              <div className="flex gap-4">
-                <p className="flex gap-2">
-                  <Calendar01Icon />
-                  2014 - 2018
-                </p>
+              <div className="flex gap-4 text-secondaryTextColor">
+                <p className="flex gap-2">📆 2014 - 2018</p>
                 <p>•</p>
-                <p className="flex gap-2">
-                  <PinLocation01Icon />
-                  Kochi, Kerala
-                </p>
+                <p className="flex gap-2">Kochi, Kerala 📍</p>
               </div>
             </div>
           </div>

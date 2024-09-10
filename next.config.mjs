@@ -9,7 +9,7 @@ const nextConfig = {
         // pathname: '**/.*/**',
 
         protocol: "https",
-        hostname: "**.vercel.app",
+        hostname: "**.githubusercontent.com",
         port: "",
       },
     ],
